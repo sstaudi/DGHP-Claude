@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – DGHP</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Zum Inhalt springen</a>
+
+<header>
+  <div class="header-top">
+    <div class="header-inner">
+      <div class="logo-img">
+        <img src="img/dghp-logo-website.png" alt="Deutsche Gesellschaft für Hirnstimulation in der Psychiatrie e.V." height="55">
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Hauptnavigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Navigation öffnen">&#9776;</button>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li>
+          <a href="ueber-uns.html">Über uns &#9662;</a>
+          <ul>
+            <li><a href="ziele.html">Ziele &amp; Satzung</a></li>
+            <li><a href="vorstand.html">Vorstand</a></li>
+            <li><a href="mitgliedschaft.html">Mitglied werden</a></li>
+            <li><a href="mitglieder.html">Mitglieder</a></li>
+            <li><a href="kooperationen.html">Kooperationen</a></li>
+            <li><a href="tagungen.html">Tagungen</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="lehre.html">Lehre &#9662;</a>
+          <ul>
+            <li><a href="nibs-zertifikat.html">NIBS-Zertifikat</a></li>
+            <li><a href="fortbildungen.html">Fortbildungen</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="forschung.html">Forschung &#9662;</a>
+          <ul>
+            <li><a href="aktivitaeten.html">Aktivitäten</a></li>
+            <li><a href="publikationen.html">Publikationen</a></li>
+          </ul>
+        </li>
+        <li><a href="kliniken.html">Kliniken</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="page-hero" id="main-content">
+  <h2>Kontakt</h2>
+  <p>Wir freuen uns über Ihre Anfrage</p>
+</div>
+
+<div class="page-content">
+  <div class="contact-grid">
+    <!-- Formular -->
+    <div>
+      <h2>Nachricht senden</h2>
+      <form action="#" method="post" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Vor- und Nachname">
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail-Adresse *</label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="ihre@email.de">
+        </div>
+        <div class="form-group">
+          <label for="betreff">Betreff</label>
+          <input type="text" id="betreff" name="betreff" placeholder="Ihr Betreff">
+        </div>
+        <div class="form-group">
+          <label for="nachricht">Nachricht *</label>
+          <textarea id="nachricht" name="nachricht" required aria-required="true" placeholder="Ihre Nachricht..."></textarea>
+        </div>
+        <div class="form-group" style="display:flex;align-items:center;gap:10px;">
+          <input type="checkbox" id="datenschutz" name="datenschutz" required aria-required="true" style="width:auto;">
+          <label for="datenschutz" style="font-weight:400;font-size:0.85rem;">
+            Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin damit einverstanden. *
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Nachricht absenden</button>
+      </form>
+      <div id="success-msg" style="display:none;margin-top:16px;" class="alert alert-info">
+        Ihre Nachricht wurde gesendet. Wir melden uns baldmöglichst bei Ihnen.
+      </div>
+    </div>
+
+    <!-- Kontaktdaten -->
+    <div>
+      <h2>Anschrift</h2>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>Geschäftsstelle</h3>
+        <p>
+          Deutsche Gesellschaft für<br>
+          Hirnstimulation in der Psychiatrie e.V.<br>
+          <br>
+          c/o Klinik für Psychiatrie und Psychotherapie<br>
+          Universität Regensburg<br>
+          Universitätsstr. 84<br>
+          93053 Regensburg<br>
+          <br>
+          <strong>E-Mail:</strong> info@dghp-online.de<br>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Vorstand</h3>
+        <p>
+          <strong>1. Vorsitzender:</strong><br>
+          Prof. Dr. Berthold Langguth<br>
+          <br>
+          Für Fragen zu Mitgliedschaft, Tagungen, NIBS-Zertifikat oder Kooperationen nutzen Sie bitte das Kontaktformular.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>DGHP</h4>
+      <p>Die Deutsche Gesellschaft für Hirnstimulation in der Psychiatrie e.V. fördert Wissenschaft, Lehre und klinische Praxis im Bereich psychiatrischer Hirnstimulationsverfahren.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="lehre.html">Lehre</a></li>
+        <li><a href="forschung.html">Forschung</a></li>
+        <li><a href="kliniken.html">Kliniken</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Deutsche Gesellschaft für Hirnstimulation in der Psychiatrie e.V.</span>
+    <span><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('success-msg').style.display = 'block';
+  e.target.reset();
+}
+</script>
+</body>
+</html>

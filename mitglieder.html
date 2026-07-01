@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitglieder – DGHP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .members-search {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .members-search input {
+      flex: 1;
+      min-width: 200px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.92rem;
+      font-family: inherit;
+    }
+    .members-search input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(224,80,24,0.12);
+    }
+    .members-count {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+    .members-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .members-table th {
+      background: var(--primary);
+      color: var(--white);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+    }
+    .members-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .members-table tr:nth-child(even) td { background: var(--bg); }
+    .members-table tr:hover td { background: var(--accent-light); }
+    .members-table td:first-child { font-weight: 600; color: var(--primary-dark); }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Zum Inhalt springen</a>
+
+<header>
+  <div class="header-top">
+    <div class="header-inner">
+      <div class="logo-img">
+        <img src="img/dghp-logo-website.png" alt="Deutsche Gesellschaft für Hirnstimulation in der Psychiatrie e.V." height="55">
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Hauptnavigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Navigation öffnen">&#9776;</button>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li>
+          <a href="ueber-uns.html" class="active">Über uns &#9662;</a>
+          <ul>
+            <li><a href="ziele.html">Ziele &amp; Satzung</a></li>
+            <li><a href="vorstand.html">Vorstand</a></li>
+            <li><a href="mitgliedschaft.html">Mitglied werden</a></li>
+            <li><a href="mitglieder.html">Mitglieder</a></li>
+            <li><a href="kooperationen.html">Kooperationen</a></li>
+            <li><a href="tagungen.html">Tagungen</a></li>
+          </ul>
+        </li>
+        <li><a href="lehre.html">Lehre &#9662;</a><ul><li><a href="nibs-zertifikat.html">NIBS-Zertifikat</a></li><li><a href="fortbildungen.html">Fortbildungen</a></li></ul></li>
+        <li><a href="forschung.html">Forschung &#9662;</a><ul><li><a href="aktivitaeten.html">Aktivitäten</a></li><li><a href="publikationen.html">Publikationen</a></li></ul></li>
+        <li><a href="kliniken.html">Kliniken</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="page-hero" id="main-content">
+  <h2>Mitglieder der DGHP</h2>
+  <p>Aktuelle Mitgliederliste der Deutschen Gesellschaft für Hirnstimulation in der Psychiatrie e.V.</p>
+</div>
+
+<div class="page-content">
+  <div class="members-search">
+    <input type="text" id="memberSearch" placeholder="Name oder Institution suchen …" oninput="filterMembers()">
+    <span class="members-count" id="memberCount">111 Mitglieder</span>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="members-table" id="membersTable" aria-label="Mitgliederliste der DGHP">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Institution / Klinik</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Dr. med. Mohamed Abdelnaim</td><td>Klinik für Psychiatrie und Psychotherapie der Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>2</td><td>Prof. Dr. med. Jens Acker</td><td>Psychiatrie und Psychotherapie, Klinik Bad Zurzach</td></tr>
+        <tr><td>3</td><td>Prof. Dr. med. Markus W. Agelink</td><td>Sana Kliniken Duisburg</td></tr>
+        <tr><td>4</td><td>Dr. med. Shawki-Iulian Ali</td><td>Bertha Krankenhaus – Sanakliniken Duisburg</td></tr>
+        <tr><td>5</td><td>Prof. Dr. med. Malek Bajbouj</td><td>Charité – Universitätsmedizin Berlin</td></tr>
+        <tr><td>6</td><td>Prof. Dr. phil. Til Ole Bergmann</td><td>Neuroimaging Center der Universitätsmedizin Mainz</td></tr>
+        <tr><td>7</td><td>Dr. Dipl. Psych. Bettina Bewernick</td><td>Uniklinikum Bonn</td></tr>
+        <tr><td>8</td><td>Dr. med. Gerrit Breitfelder</td><td>Zentralinstitut für seelische Gesundheit Mannheim</td></tr>
+        <tr><td>9</td><td>Dirk Brunner</td><td>Asklepios Fachklinikum Stadtroda</td></tr>
+        <tr><td>10</td><td>Dr. med. Raimund Busch</td><td>LVR-Klinik Düren</td></tr>
+        <tr><td>11</td><td>Dr. med. Ewa Czionek-Szpak</td><td>Somnia Privatkliniken, Klinik Mönchengladbach</td></tr>
+        <tr><td>12</td><td>Prof. Dr. med. Joachim Cordes</td><td>Florence-Nightingale-Krankenhaus Düsseldorf</td></tr>
+        <tr><td>13</td><td>Dr. med. Stefanie Dierkes-Möller</td><td>Privatpraxis für Neurologie im Vest Recklinghausen</td></tr>
+        <tr><td>14</td><td>Prof. Dr. med. Peter Eichhammer</td><td>Bezirksklinikum Mainkofen</td></tr>
+        <tr><td>15</td><td>Abdelrahman Saad Elfetiani</td><td>kbo-Inn-Salzach-Klinikum Wasserburg</td></tr>
+        <tr><td>16</td><td>Dr. med. Birgit Emmerling</td><td>LWL-Klinik Dortmund</td></tr>
+        <tr><td>17</td><td>Dr. med. Maria Epple</td><td>Lech-Mangfall-Klinik Peissenberg</td></tr>
+        <tr><td>18</td><td>Prof. Dr. med. Andreas Fallgatter</td><td>Eberhard-Karls-Universität Tübingen</td></tr>
+        <tr><td>19</td><td>Dr. med. Niels Flegel</td><td>Asklepios Hamburg</td></tr>
+        <tr><td>20</td><td>Dr. med. Silvius Fehler</td><td>Helios Fachkliniken Hildburghausen</td></tr>
+        <tr><td>21</td><td>Dr. med. Elmar Frank</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>22</td><td>PD Dr. med. Lukas Frase</td><td>Universitätsklinikum Freiburg</td></tr>
+        <tr><td>23</td><td>Andreas Gewandt</td><td>Ameos Klinikum Haldensleben</td></tr>
+        <tr><td>24</td><td>Dr. med. univ. Godber Mathis Godbersen</td><td>Medizinische Universität Wien</td></tr>
+        <tr><td>25</td><td>PD Dr. med. Roberto Goya-Maldonado</td><td>Universitätsmedizin Göttingen</td></tr>
+        <tr><td>26</td><td>Dr. med. Wolfgang Joachim Gronau</td><td>Praxis für Neurologie und Psychiatrie Mannheim</td></tr>
+        <tr><td>27</td><td>Dr. med. Ali Riza Günes</td><td>Alexius/Josef Krankenhaus Neuss</td></tr>
+        <tr><td>28</td><td>Prof. Dr. med. Göran Hajak</td><td>Privatklinik München</td></tr>
+        <tr><td>29</td><td>Dr. med. Islam Halawa</td><td>Asklepios Psychiatrie Fachklinikum Göttingen</td></tr>
+        <tr><td>30</td><td>Prof. Dr. med. Alkomiet Hasan</td><td>Universität Augsburg</td></tr>
+        <tr><td>31</td><td>Dr. med. Stephan Haupenthal</td><td>Neuropsychiatrie Wallisellen</td></tr>
+        <tr><td>32</td><td>Dr. med. Tobias Hebel</td><td>Universität Regensburg</td></tr>
+        <tr><td>33</td><td>Prof. Dr. med. Christoph Herrmann</td><td>Carl von Ossietzky Universität Oldenburg</td></tr>
+        <tr><td>34</td><td>Prof. Dr. phil. Martin Herrmann</td><td>Universitätsklinikum Würzburg</td></tr>
+        <tr><td>35</td><td>Prof. Dr. med. Jacqueline Höppner-Buchmann</td><td>HELIOS Klinik Schwerin</td></tr>
+        <tr><td>36</td><td>Dr. med. Hannes Horter</td><td>Oberberg Fachklinik Weserbergland</td></tr>
+        <tr><td>37</td><td>Johannes Hübner</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>38</td><td>Prof. Dr. Dr. med. René Hurlemann</td><td>Universitätsmedizin Oldenburg</td></tr>
+        <tr><td>39</td><td>Lachezar Ivanov</td><td>SKH Arnsdorf</td></tr>
+        <tr><td>40</td><td>PD Dr. med. Thomas Kammer</td><td>Universitätsklinikum Ulm</td></tr>
+        <tr><td>41</td><td>Dr. med. Daniel Kamp</td><td>LVR-Klinikum Düsseldorf</td></tr>
+        <tr><td>42</td><td>Dr. med. Daniel Keeser</td><td>Ludwig-Maximilians-Universität München</td></tr>
+        <tr><td>43</td><td>Katharina Kerkel</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>44</td><td>M.Sc. Maximilian Kiebs</td><td>Universitätsklinikum Bonn</td></tr>
+        <tr><td>45</td><td>PD Dr. med. Bernhard Kis</td><td>St. Elisabeth-Krankenhaus Hattingen</td></tr>
+        <tr><td>46</td><td>Dr. med. Roland Klug</td><td>Universität Ulm am Bezirkskrankenhaus Günzburg</td></tr>
+        <tr><td>47</td><td>Dr. med. Ina Kluge</td><td>UKGM Marburg</td></tr>
+        <tr><td>48</td><td>Dr. med. Nikolaus Krämer</td><td>Asklepios Hamburg</td></tr>
+        <tr><td>49</td><td>Prof. Dr. med. Peter Kreuzer</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>50</td><td>Lisa Kronbichler</td><td>Christian-Doppler-Klinik Salzburg</td></tr>
+        <tr><td>51</td><td>Prof. Dr. med. Jens Kuhn</td><td>Evangelisches Klinikum Niederrhein Oberhausen</td></tr>
+        <tr><td>52</td><td>Dr. med. Milenko Kujovic</td><td>LVR-Klinikum Düsseldorf</td></tr>
+        <tr><td>53</td><td>Dr. med. Sezer Lammers</td><td>GFO Klinik Wissen</td></tr>
+        <tr><td>54</td><td>Prof. Dr. med. Michael Landgrebe</td><td>kbo-Lech-Mangfall-Klinik Agatharied</td></tr>
+        <tr><td>55</td><td>PD Dr. med. MHBA Fabian Ulrik Lang</td><td>Psychotherapeutische Praxis Gersthofen</td></tr>
+        <tr><td>56</td><td>Prof. Dr. med. Berthold Langguth</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>57</td><td>PD Dr. med. Fritz-Georg Lehnhardt</td><td>Evangelisches Krankenhaus Bergisch Gladbach</td></tr>
+        <tr><td>58</td><td>Dr. med. Christiane Licht M.A.</td><td>RWTH Uniklinik Aachen</td></tr>
+        <tr><td>59</td><td>Mag. rer. nat. Clemens Mielacher</td><td>Medizinische Universität Wien</td></tr>
+        <tr><td>60</td><td>Dr. rer. nat. Alejandro Mendoza Schulz</td><td>Praxis für Psychiatrie und Psychotherapie Aurich</td></tr>
+        <tr><td>61</td><td>Dr. med. Laura Mendoza Schulz</td><td>Praxis für Psychiatrie und Psychotherapie Aurich</td></tr>
+        <tr><td>62</td><td>Feres José Mocayar Marón</td><td>Universitätsklinikum Freiburg</td></tr>
+        <tr><td>63</td><td>Dr. med. Peter Möller</td><td>Praxis Peter Möller Marl</td></tr>
+        <tr><td>64</td><td>Dr. med. Florian Müller-Dahlhaus</td><td>Universitätsmedizin Mainz</td></tr>
+        <tr><td>65</td><td>Dr. med. Felix Mülsch</td><td>Universitätsklinikum Freiburg</td></tr>
+        <tr><td>66</td><td>Prof. Dr. med. Michael Noll-Hussong</td><td>Tagesklinik Westend München</td></tr>
+        <tr><td>67</td><td>Prof. Dr. med. Claus Normann</td><td>Universitätsklinikum Freiburg</td></tr>
+        <tr><td>68</td><td>Dr. med. Andreas Nowak</td><td>MVZ für Neurologie und Psychiatrie GbR Hennef</td></tr>
+        <tr><td>69</td><td>Dr. med. Julia Bozena Pach</td><td>Evangelische Kliniken Gelsenkirchen</td></tr>
+        <tr><td>70</td><td>Prof. Dr. med. Frank Padberg</td><td>Ludwig-Maximilians-Universität München</td></tr>
+        <tr><td>71</td><td>Dr. med. Ulrich Palm</td><td>P3 Klinik GmbH Tutzing</td></tr>
+        <tr><td>72</td><td>Dr. biol. hum. Dipl. Psych. Ariane Pfeiffer</td><td>Ludwig-Maximilians-Universität München</td></tr>
+        <tr><td>73</td><td>Dr. med. Rodica-Valentina Pican</td><td>Sana Klinikum Duisburg</td></tr>
+        <tr><td>74</td><td>Prof. Dr. med. Christian Plewnia</td><td>Eberhard-Karls-Universität Tübingen</td></tr>
+        <tr><td>75</td><td>Dr. med. Peter Plum</td><td>Kreisklinikum Siegen</td></tr>
+        <tr><td>76</td><td>Prof. Dr. med. Oliver Pogarell</td><td>Ludwig-Maximilians-Universität München</td></tr>
+        <tr><td>77</td><td>Dr. med. Thomas Polak</td><td>Universitätsklinikum Würzburg</td></tr>
+        <tr><td>78</td><td>Prof. Dr. med. Timm Pöppl</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>79</td><td>Prof. Dr. med. Ulrich Preuss</td><td>Asklepios Fachklinik Wiesen</td></tr>
+        <tr><td>80</td><td>Marcel Printz</td><td>UKGM Marburg</td></tr>
+        <tr><td>81</td><td>Dr. phil. Andreas Reißmann</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>82</td><td>Univ.-Prof. Dr. med. Jonathan Repple</td><td>Universitätsklinikum Frankfurt</td></tr>
+        <tr><td>83</td><td>Prof. Dr. med. Kneginja Richter</td><td>Curamed Tagklinik Nürnberg</td></tr>
+        <tr><td>84</td><td>Harald Riedl</td><td>Praxis für Neurologie und Psychiatrie Northeim</td></tr>
+        <tr><td>85</td><td>Dr. Katrin Sakreida</td><td>RWTH Uniklinik Aachen</td></tr>
+        <tr><td>86</td><td>Prof. Dr. med. Alexander Sartorius</td><td>Zentralinstitut für Seelische Gesundheit Mannheim</td></tr>
+        <tr><td>87</td><td>Prof. Dr. phil. Dipl. Psych. Martin Schecklmann</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>88</td><td>Dr. med. Lukas Schilberg</td><td>BrainStim Neuromodulation Center Düsseldorf</td></tr>
+        <tr><td>89</td><td>Prof. Dr. med. Thomas Schläpfer</td><td>Universitätsklinikum Freiburg</td></tr>
+        <tr><td>90</td><td>Prof. Dr. med. Carlos Schönfeldt-Lecuona</td><td>Universitätsklinikum Ulm</td></tr>
+        <tr><td>91</td><td>PD Dr. Dipl. Psych. Stefan Schoisswohl</td><td>Universität Regensburg am Bezirksklinikum</td></tr>
+        <tr><td>92</td><td>Uwe Schreiber</td><td>Tagesklinik mit Institutsambulanz Amberg</td></tr>
+        <tr><td>93</td><td>Dr. med. Torsten Schulz</td><td>Universitätsmedizin Rostock</td></tr>
+        <tr><td>94</td><td>Prof. Dr. med. Carl Christoph Schultz</td><td>Sächsisches Krankenhaus Rodewisch</td></tr>
+        <tr><td>95</td><td>Sandra Schwarz</td><td>Universitätsmedizin Mainz</td></tr>
+        <tr><td>96</td><td>Nadja Sippel</td><td>RWTH Uniklinik Aachen</td></tr>
+        <tr><td>97</td><td>Dr. med. Katharina Steiner</td><td>LVR-Universitätsklinikum Essen</td></tr>
+        <tr><td>98</td><td>Dr. med. Wolfgang Strube</td><td>BKH Augsburg</td></tr>
+        <tr><td>99</td><td>Dr. med. Charles-Arnold Timäus</td><td>Privatpraxis Duderstadt</td></tr>
+        <tr><td>100</td><td>Dr. med. Heiko Ullrich</td><td>Kreisklinikum Siegen</td></tr>
+        <tr><td>101</td><td>Dr. med. Stefan Vestring</td><td>Universitätsklinikum Freiburg</td></tr>
+        <tr><td>102</td><td>Dr. med. Ulrike Vogelmann</td><td>Ludwig-Maximilians-Universität München</td></tr>
+        <tr><td>103</td><td>Amelie Isabell Völkel</td><td>BKH Augsburg</td></tr>
+        <tr><td>104</td><td>Dr. med. Ahmed Wahba</td><td>Horst Schmidt Klinik Wiesbaden</td></tr>
+        <tr><td>105</td><td>Dr. med. Maike Wallner</td><td>kbo-Isar-Amper-Klinikum Ost</td></tr>
+        <tr><td>106</td><td>Prof. Dr. med. Thomas Wobrock</td><td>Kreiskliniken Darmstadt-Dieburg</td></tr>
+        <tr><td>107</td><td>Dr. med. Maxim Zavorotnyy</td><td>Psychiatrische Dienste Aargau AG Windisch</td></tr>
+        <tr><td>108</td><td>Philipp Ziebell</td><td>Universität Würzburg</td></tr>
+        <tr><td>109</td><td>Christoph Ziegelmayer</td><td>Sozialstiftung Bamberg</td></tr>
+        <tr><td>110</td><td>Christian Zons</td><td>Oberberg Somnia Klinik Köln/Hürth</td></tr>
+        <tr><td>111</td><td>Prof. Dr. med. Peter Zwanzger</td><td>kbo-Inn-Salzach-Klinikum Wasserburg</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><h4>DGHP</h4><p>Die Deutsche Gesellschaft für Hirnstimulation in der Psychiatrie e.V. fördert Wissenschaft, Lehre und klinische Praxis im Bereich psychiatrischer Hirnstimulationsverfahren.</p></div>
+    <div><h4>Navigation</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="lehre.html">Lehre</a></li><li><a href="forschung.html">Forschung</a></li><li><a href="kliniken.html">Kliniken</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutzerklärung</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Deutsche Gesellschaft für Hirnstimulation in der Psychiatrie e.V.</span>
+    <span><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function filterMembers() {
+  const q = document.getElementById('memberSearch').value.toLowerCase();
+  const rows = document.querySelectorAll('#membersTable tbody tr');
+  let visible = 0;
+  rows.forEach(function(row) {
+    const text = row.textContent.toLowerCase();
+    if (text.includes(q)) {
+      row.classList.remove('hidden');
+      visible++;
+    } else {
+      row.classList.add('hidden');
+    }
+  });
+  document.getElementById('memberCount').textContent = visible + ' Mitglieder';
+}
+</script>
+</body>
+</html>
